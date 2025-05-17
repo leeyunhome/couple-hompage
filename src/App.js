@@ -1,5 +1,8 @@
 import React from 'react';
 import './App.css';
+import KoreaMap from './KoreaMap'; // ← 방금 만든 지도 컴포넌트 import
+// index.js or App.js
+import 'leaflet/dist/leaflet.css';
 
 function App() {
   const anniversary = new Date('2025-02-24');
@@ -19,6 +22,7 @@ function App() {
         <p className="names">👦 윤호 &nbsp; + &nbsp; 👧 수빈</p>
         <p className="days">우리가 함께한 지 <strong>{daysTogether}</strong>일째 💖</p>
         <p className="message">"어제보다 오늘 더 사랑해 💌"</p>
+        <KoreaMap /> {/* 지도 표시 */}
       </div>
     </div>
   );
